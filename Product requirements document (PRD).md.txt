@@ -58,4 +58,4 @@ User will be able to search a username from any platform. Then user will be able
 > * Rcoket League API Integration
 
 ### Wireframes 
-<img src='apex-wireframe.png'/>
+picture is outside
