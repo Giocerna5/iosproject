@@ -16,6 +16,11 @@
 		8F8601E52383436200B2E1BF /* apex_stat_trackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8601E42383436200B2E1BF /* apex_stat_trackerTests.swift */; };
 		8F8601F02383436200B2E1BF /* apex_stat_trackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8601EF2383436200B2E1BF /* apex_stat_trackerUITests.swift */; };
 		8F8601FE2383447100B2E1BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8601FD2383447100B2E1BF /* ContentView.swift */; };
+		D0070D5F238DD1DE0069761A /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0070D5E238DD1DE0069761A /* Account.swift */; };
+		D0070D61238DD7410069761A /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0070D60238DD7410069761A /* AccountViewModel.swift */; };
+		D0070D69239371070069761A /* StatsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0070D68239371070069761A /* StatsRow.swift */; };
+		D0070D6B239372020069761A /* StatsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0070D6A239372020069761A /* StatsList.swift */; };
+		D0070D6D239712F90069761A /* SegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0070D6C239712F90069761A /* SegmentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		8F8601EF2383436200B2E1BF /* apex_stat_trackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apex_stat_trackerUITests.swift; sourceTree = "<group>"; };
 		8F8601F12383436200B2E1BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F8601FD2383447100B2E1BF /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D0070D5E238DD1DE0069761A /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		D0070D60238DD7410069761A /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		D0070D68239371070069761A /* StatsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsRow.swift; sourceTree = "<group>"; };
+		D0070D6A239372020069761A /* StatsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsList.swift; sourceTree = "<group>"; };
+		D0070D6C239712F90069761A /* SegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				8F7FE131238379FD003F3720 /* ProfileView.swift */,
+				D0070D6A239372020069761A /* StatsList.swift */,
+				D0070D6C239712F90069761A /* SegmentView.swift */,
+				D0070D68239371070069761A /* StatsRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -115,6 +128,8 @@
 				8F8601D32383436200B2E1BF /* Assets.xcassets */,
 				8F8601D82383436200B2E1BF /* LaunchScreen.storyboard */,
 				8F8601FD2383447100B2E1BF /* ContentView.swift */,
+				D0070D60238DD7410069761A /* AccountViewModel.swift */,
+				D0070D5E238DD1DE0069761A /* Account.swift */,
 				8F8601DB2383436200B2E1BF /* Info.plist */,
 				8F8601D52383436200B2E1BF /* Preview Content */,
 			);
@@ -278,9 +293,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0070D69239371070069761A /* StatsRow.swift in Sources */,
+				D0070D6D239712F90069761A /* SegmentView.swift in Sources */,
+				D0070D5F238DD1DE0069761A /* Account.swift in Sources */,
 				8F7FE132238379FD003F3720 /* ProfileView.swift in Sources */,
 				8F8601CE2383436000B2E1BF /* AppDelegate.swift in Sources */,
 				8F8601D02383436000B2E1BF /* SceneDelegate.swift in Sources */,
+				D0070D6B239372020069761A /* StatsList.swift in Sources */,
+				D0070D61238DD7410069761A /* AccountViewModel.swift in Sources */,
 				8F8601FE2383447100B2E1BF /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
