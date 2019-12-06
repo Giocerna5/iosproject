@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct SegmentView: View {
+    @EnvironmentObject var viewModel: AccountViewModel
     var segNum : Int
     
     init(segment : Int){
@@ -18,12 +19,12 @@ struct SegmentView: View {
         GeometryReader { geom in
             VStack{
                 HStack{
-                    Text("Overview")
+                    Text(self.$viewModel.acc.wrappedValue.data?.segments?[self.segNum].metadata?.name ?? "Loading...")
                         .foregroundColor(.white)
                         .font(.system(size: 40))
                 }
                 ScrollView(.vertical, showsIndicators: true) {
-                    StatsList()
+                    StatsList(segment: self.segNum)
                 }.frame(width: geom.size.width,
                     height: geom.size.height * 0.6)
             }.frame(width: geom.size.width)
@@ -33,6 +34,6 @@ struct SegmentView: View {
 
 struct SegmentView_Previews: PreviewProvider {
     static var previews: some View {
-        SegmentView(segment: 0)
+        SegmentView(segment: 0).environmentObject(AccountViewModel())
     }
 }

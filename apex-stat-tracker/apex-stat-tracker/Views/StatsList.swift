@@ -11,6 +11,11 @@ import SwiftUI
 struct StatsList: View {
     
     @EnvironmentObject var viewModel: AccountViewModel
+    var segNum : Int
+    
+    init(segment : Int){
+        self.segNum = segment
+    }
     
     var body: some View {
         VStack(alignment: .center, spacing: 40) {
@@ -30,7 +35,7 @@ struct StatsList: View {
         }.background(Color.init(red: 0.5, green: 0.5, blue: 0.5).opacity(0.2))
     }
     func AccData() -> TempList {
-        guard let data = self.$viewModel.acc.wrappedValue.data?.segments?[0].stats else{
+        guard let data = self.$viewModel.acc.wrappedValue.data?.segments?[self.segNum].stats else{
             return TempList(map: [:])
         }
         let mapping : [String:String] = [
@@ -71,6 +76,6 @@ struct StatsList: View {
 
 struct StatsList_Previews: PreviewProvider {
     static var previews: some View {
-        StatsList().environmentObject(AccountViewModel())
+        StatsList(segment: 0).environmentObject(AccountViewModel())
     }
 }

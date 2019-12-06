@@ -19,20 +19,63 @@ struct ProfileView: View {
                 VStack {
                     
                     HStack {
-                        Text("Username: " + (self.$viewModel.acc.wrappedValue.data?.platformInfo?.platformUserHandle ?? "nil") ).foregroundColor(.red)
+                        Text((self.$viewModel.acc.wrappedValue
+                            .data?.platformInfo?.platformUserHandle?.uppercased() ?? "nil") )
+                            .foregroundColor(.white)
+                            .font(.system(size: 25))
                         Spacer()
-                        Text("Platform: xbox").foregroundColor(.red)
+                        Text("XBOX")
+                            .foregroundColor(.white)
+                            .font(.system(size: 25))
                     }
                     Spacer()
                     
-                    SegmentView(segment: 0)
+                    SegmentView(segment: segmentNumber)
                     
+                    HStack{
+                        Button(action: {
+                            if self.segmentNumber > 0 {
+                                print(self.segmentNumber)
+                                self.segmentNumber -= 1
+                            }
+                        }) {
+                            Text("Previous")
+                            .foregroundColor(Color.init(red: 0.3, green: 0.3, blue: 0.3))
+                            .font(.system(size: 25))
+                            .padding(10)
+                        }.background(Color.white)
+                        .cornerRadius(15)
+                        .padding(.trailing, 10)
+                        .padding(.leading, 10)
+                        .padding(.top, 4)
+                        .padding(.bottom, 4)
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            if self.segmentNumber < (self.$viewModel.acc.wrappedValue.data?.segments?.count ?? 0) - 1{
+                                self.segmentNumber += 1
+                            }
+                        }) {
+                            Text("Next")
+                            .foregroundColor(Color.init(red: 0.3, green: 0.3, blue: 0.3))
+                            .font(.system(size: 25))
+                            .padding(10)
+                        }.background(Color.white)
+                        .cornerRadius(15)
+                        .padding(.trailing, 10)
+                        .padding(.leading, 10)
+                        .padding(.top, 4)
+                        .padding(.bottom, 4)
+                    }
+
 
                 } // V Stack
                 .background(
-                    Image(uiImage:      ($viewModel.remoteImageData.wrappedValue.isEmpty ?
-                            UIImage(imageLiteralResourceName: "lifeline-profile") :
-                            UIImage(data: $viewModel.remoteImageData.wrappedValue)!) )
+                    Image(uiImage: (segmentNumber == 0 ?
+                            UIImage(imageLiteralResourceName: "apexWhite") :
+                        UIImage(data: $viewModel.remoteImageData.wrappedValue[($viewModel.acc.wrappedValue.data?.segments?[segmentNumber].metadata?.name)!]! )!
+                        ) )
                         .resizable()
                         .opacity(0.7)
                 )
@@ -46,15 +89,6 @@ struct ProfileView: View {
         .background(Color.black.edgesIgnoringSafeArea(.all))
         .onAppear(perform: self.viewModel.load)
     } // body
-    
-    func getLegendImage() -> Image{
-        if($viewModel.remoteImageData.wrappedValue.isEmpty){
-            return Image("lifeline-profile")
-        }
-        else{
-            return Image(uiImage: UIImage(data: $viewModel.remoteImageData.wrappedValue)! )
-        }
-    }
 
 }
 
