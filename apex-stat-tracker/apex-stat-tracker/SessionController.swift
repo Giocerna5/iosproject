@@ -18,6 +18,7 @@ class SessionController : ObservableObject {
     @Published var handle: AuthStateDidChangeListenerHandle?
     @Published var db = Firestore.firestore()
     @Published var dbResult : [String:String] = [:]
+    @Published var platform: String = "XBOX"
     
     func createUser (email: String, xbox: String?, ps4: String?, pc: String?) {
         

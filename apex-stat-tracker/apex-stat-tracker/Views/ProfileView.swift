@@ -14,7 +14,7 @@ struct ProfileView: View {
     
     @State var segmentNumber : Int = 0
     @State var menuOpen: Bool = false
-    
+
     var body: some View {
         VStack {
             ZStack {
@@ -36,7 +36,7 @@ struct ProfileView: View {
                             .foregroundColor(Color.init(red: 179.0, green: 0.0, blue: 0.0))
                             .font(.system(size: 25))
                         Spacer()
-                        Text("XBOX")
+                        Text(self.$sessionController.platform.wrappedValue)
                             .foregroundColor(.white)
                             .font(.system(size: 20))
 
@@ -106,27 +106,52 @@ struct ProfileView: View {
                 }
         } //V stack
         .background(Color.black.edgesIgnoringSafeArea(.all))
-            .onAppear(perform: self.loadData)
+            .onAppear(perform: self.loadDataXBL)
     } // body
     
-    func loadData(){
+    func loadDataXBL(){
         self.sessionController.getUserInfo(email: self.$sessionController.session.wrappedValue?.email ?? "no email") {
             
-            print("hello")
             self.viewModel.load(platform: "xbl", handle: self.$sessionController.dbResult.wrappedValue["xbox"] ?? "nada")
+            
+            self.sessionController.platform = "XBOX"
         }
         
     }
+
     func openMenu() {
         self.menuOpen.toggle()
     }
 
     struct MenuContent: View {
         @EnvironmentObject var sessionController: SessionController
+        @EnvironmentObject var viewModel: AccountViewModel
+        
         let width: CGFloat
         
         var body: some View {
                 VStack {
+                    Button(action: self.loadDataXBL){
+                        Spacer()
+                        Text("Xbox").foregroundColor(.white).font(.system(size: 20))
+                        Spacer()
+                    }.background(Color.init(red: 179.0, green: 0.0, blue: 0.0))
+                    .cornerRadius(10)
+                    .padding(5)
+                    Button(action: self.loadDataPS4){
+                        Spacer()
+                        Text("PS4").foregroundColor(.white).font(.system(size: 20))
+                        Spacer()
+                    }.background(Color.init(red: 179.0, green: 0.0, blue: 0.0))
+                    .cornerRadius(10)
+                    .padding(5)
+                    Button(action: self.loadDataPC){
+                        Spacer()
+                        Text("PC").foregroundColor(.white).font(.system(size: 20))
+                        Spacer()
+                    }.background(Color.init(red: 179.0, green: 0.0, blue: 0.0))
+                    .cornerRadius(10)
+                    .padding(5)
                     Button(action: self.signOut){
                         Spacer()
                         Text("Logout").foregroundColor(.white).font(.system(size: 20))
@@ -139,6 +164,30 @@ struct ProfileView: View {
         } //body
         func signOut() {
             sessionController.signOut()
+        }
+        func loadDataXBL(){
+            self.sessionController.getUserInfo(email: self.$sessionController.session.wrappedValue?.email ?? "no email") {
+                
+                self.viewModel.load(platform: "xbl", handle: self.$sessionController.dbResult.wrappedValue["xbox"] ?? "nada")
+                self.sessionController.platform = "XBOX"
+            }
+            
+        }
+        func loadDataPS4(){
+            self.sessionController.getUserInfo(email: self.$sessionController.session.wrappedValue?.email ?? "no email") {
+                
+                self.viewModel.load(platform: "psn", handle: self.$sessionController.dbResult.wrappedValue["ps4"] ?? "nada")
+                self.sessionController.platform = "PS4"
+            }
+            
+        }
+        func loadDataPC(){
+            self.sessionController.getUserInfo(email: self.$sessionController.session.wrappedValue?.email ?? "no email") {
+                
+                self.viewModel.load(platform: "pc", handle: self.$sessionController.dbResult.wrappedValue["pc"] ?? "nada")
+                self.sessionController.platform = "PC"
+            }
+            
         }
     }
 
