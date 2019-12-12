@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		155F13C45C2B646428955A09 /* Pods_apex_stat_tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCBF7229B940F762324331D0 /* Pods_apex_stat_tracker.framework */; };
 		8F7FE132238379FD003F3720 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7FE131238379FD003F3720 /* ProfileView.swift */; };
 		8F8601CE2383436000B2E1BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8601CD2383436000B2E1BF /* AppDelegate.swift */; };
 		8F8601D02383436000B2E1BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8601CF2383436000B2E1BF /* SceneDelegate.swift */; };
@@ -21,6 +22,13 @@
 		D0070D69239371070069761A /* StatsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0070D68239371070069761A /* StatsRow.swift */; };
 		D0070D6B239372020069761A /* StatsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0070D6A239372020069761A /* StatsList.swift */; };
 		D0070D6D239712F90069761A /* SegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0070D6C239712F90069761A /* SegmentView.swift */; };
+		D0070D6F239B4D470069761A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0070D6E239B4D470069761A /* GoogleService-Info.plist */; };
+		D045E075239B55B00010DA3F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D045E074239B55B00010DA3F /* User.swift */; };
+		D045E077239B56A10010DA3F /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D045E076239B56A10010DA3F /* SessionController.swift */; };
+		D045E07923A02F000010DA3F /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D045E07823A02EFF0010DA3F /* LogInView.swift */; };
+		D045E07B23A030840010DA3F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D045E07A23A030840010DA3F /* SignUpView.swift */; };
+		D4FB464E2EF27463C166F6C5 /* Pods_apex_stat_trackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7288068CBFD0CF626D23264C /* Pods_apex_stat_trackerTests.framework */; };
+		FB64E0E05C0A4608E7696B4E /* Pods_apex_stat_tracker_apex_stat_trackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 582165D6385714F42BF6A6A1 /* Pods_apex_stat_tracker_apex_stat_trackerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +49,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		268F7FEE9AF92947B17C2789 /* Pods-apex-stat-trackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apex-stat-trackerTests.debug.xcconfig"; path = "Target Support Files/Pods-apex-stat-trackerTests/Pods-apex-stat-trackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		40302081C5C3BDC0DCCEA857 /* Pods-apex-stat-tracker-apex-stat-trackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apex-stat-tracker-apex-stat-trackerUITests.debug.xcconfig"; path = "Target Support Files/Pods-apex-stat-tracker-apex-stat-trackerUITests/Pods-apex-stat-tracker-apex-stat-trackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4F64408FA745AA42698E846D /* Pods-apex-stat-trackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apex-stat-trackerTests.release.xcconfig"; path = "Target Support Files/Pods-apex-stat-trackerTests/Pods-apex-stat-trackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		582165D6385714F42BF6A6A1 /* Pods_apex_stat_tracker_apex_stat_trackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apex_stat_tracker_apex_stat_trackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7288068CBFD0CF626D23264C /* Pods_apex_stat_trackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apex_stat_trackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F7FE131238379FD003F3720 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		8F8601CA2383436000B2E1BF /* apex-stat-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "apex-stat-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F8601CD2383436000B2E1BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,11 +69,20 @@
 		8F8601EF2383436200B2E1BF /* apex_stat_trackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apex_stat_trackerUITests.swift; sourceTree = "<group>"; };
 		8F8601F12383436200B2E1BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F8601FD2383447100B2E1BF /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		98101D7D43A5C602CB00FD11 /* Pods-apex-stat-tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apex-stat-tracker.debug.xcconfig"; path = "Target Support Files/Pods-apex-stat-tracker/Pods-apex-stat-tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		CCBF7229B940F762324331D0 /* Pods_apex_stat_tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apex_stat_tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0070D5E238DD1DE0069761A /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		D0070D60238DD7410069761A /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		D0070D68239371070069761A /* StatsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsRow.swift; sourceTree = "<group>"; };
 		D0070D6A239372020069761A /* StatsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsList.swift; sourceTree = "<group>"; };
 		D0070D6C239712F90069761A /* SegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentView.swift; sourceTree = "<group>"; };
+		D0070D6E239B4D470069761A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D045E074239B55B00010DA3F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D045E076239B56A10010DA3F /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
+		D045E07823A02EFF0010DA3F /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		D045E07A23A030840010DA3F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		E1B0508EB069C56A23A05F8F /* Pods-apex-stat-tracker-apex-stat-trackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apex-stat-tracker-apex-stat-trackerUITests.release.xcconfig"; path = "Target Support Files/Pods-apex-stat-tracker-apex-stat-trackerUITests/Pods-apex-stat-tracker-apex-stat-trackerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F6BDAB683937C78CAA06164E /* Pods-apex-stat-tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apex-stat-tracker.release.xcconfig"; path = "Target Support Files/Pods-apex-stat-tracker/Pods-apex-stat-tracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				155F13C45C2B646428955A09 /* Pods_apex_stat_tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4FB464E2EF27463C166F6C5 /* Pods_apex_stat_trackerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,12 +106,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB64E0E05C0A4608E7696B4E /* Pods_apex_stat_tracker_apex_stat_trackerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CEB1710134A99332FBD8E6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98101D7D43A5C602CB00FD11 /* Pods-apex-stat-tracker.debug.xcconfig */,
+				F6BDAB683937C78CAA06164E /* Pods-apex-stat-tracker.release.xcconfig */,
+				40302081C5C3BDC0DCCEA857 /* Pods-apex-stat-tracker-apex-stat-trackerUITests.debug.xcconfig */,
+				E1B0508EB069C56A23A05F8F /* Pods-apex-stat-tracker-apex-stat-trackerUITests.release.xcconfig */,
+				268F7FEE9AF92947B17C2789 /* Pods-apex-stat-trackerTests.debug.xcconfig */,
+				4F64408FA745AA42698E846D /* Pods-apex-stat-trackerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8F7FE130238379DD003F3720 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +144,8 @@
 				8F8601E32383436200B2E1BF /* apex-stat-trackerTests */,
 				8F8601EE2383436200B2E1BF /* apex-stat-trackerUITests */,
 				8F8601CB2383436000B2E1BF /* Products */,
+				0CEB1710134A99332FBD8E6E /* Pods */,
+				D0ABFAE0CED041B5AD917264 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,12 +164,17 @@
 			children = (
 				8F7FE130238379DD003F3720 /* Views */,
 				8F8601CD2383436000B2E1BF /* AppDelegate.swift */,
+				D045E074239B55B00010DA3F /* User.swift */,
+				D045E076239B56A10010DA3F /* SessionController.swift */,
 				8F8601CF2383436000B2E1BF /* SceneDelegate.swift */,
 				8F8601D32383436200B2E1BF /* Assets.xcassets */,
 				8F8601D82383436200B2E1BF /* LaunchScreen.storyboard */,
 				8F8601FD2383447100B2E1BF /* ContentView.swift */,
+				D045E07823A02EFF0010DA3F /* LogInView.swift */,
+				D045E07A23A030840010DA3F /* SignUpView.swift */,
 				D0070D60238DD7410069761A /* AccountViewModel.swift */,
 				D0070D5E238DD1DE0069761A /* Account.swift */,
+				D0070D6E239B4D470069761A /* GoogleService-Info.plist */,
 				8F8601DB2383436200B2E1BF /* Info.plist */,
 				8F8601D52383436200B2E1BF /* Preview Content */,
 			);
@@ -162,6 +207,16 @@
 			path = "apex-stat-trackerUITests";
 			sourceTree = "<group>";
 		};
+		D0ABFAE0CED041B5AD917264 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCBF7229B940F762324331D0 /* Pods_apex_stat_tracker.framework */,
+				582165D6385714F42BF6A6A1 /* Pods_apex_stat_tracker_apex_stat_trackerUITests.framework */,
+				7288068CBFD0CF626D23264C /* Pods_apex_stat_trackerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,9 +224,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F8601F42383436200B2E1BF /* Build configuration list for PBXNativeTarget "apex-stat-tracker" */;
 			buildPhases = (
+				CA2196E3A28D52BDC9F5F464 /* [CP] Check Pods Manifest.lock */,
 				8F8601C62383436000B2E1BF /* Sources */,
 				8F8601C72383436000B2E1BF /* Frameworks */,
 				8F8601C82383436000B2E1BF /* Resources */,
+				B85AA0FC6A91631B8C28BEC8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -186,6 +243,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F8601F72383436200B2E1BF /* Build configuration list for PBXNativeTarget "apex-stat-trackerTests" */;
 			buildPhases = (
+				B029063B53851CCDCAC9B2D8 /* [CP] Check Pods Manifest.lock */,
 				8F8601DC2383436200B2E1BF /* Sources */,
 				8F8601DD2383436200B2E1BF /* Frameworks */,
 				8F8601DE2383436200B2E1BF /* Resources */,
@@ -204,9 +262,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F8601FA2383436200B2E1BF /* Build configuration list for PBXNativeTarget "apex-stat-trackerUITests" */;
 			buildPhases = (
+				9F8CC03CF3A3C127570E06F3 /* [CP] Check Pods Manifest.lock */,
 				8F8601E72383436200B2E1BF /* Sources */,
 				8F8601E82383436200B2E1BF /* Frameworks */,
 				8F8601E92383436200B2E1BF /* Resources */,
+				63486F7935090801F5296EFB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -267,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F8601DA2383436200B2E1BF /* LaunchScreen.storyboard in Resources */,
+				D0070D6F239B4D470069761A /* GoogleService-Info.plist in Resources */,
 				8F8601D72383436200B2E1BF /* Preview Assets.xcassets in Resources */,
 				8F8601D42383436200B2E1BF /* Assets.xcassets in Resources */,
 			);
@@ -288,19 +349,126 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		63486F7935090801F5296EFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-apex-stat-tracker-apex-stat-trackerUITests/Pods-apex-stat-tracker-apex-stat-trackerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-apex-stat-tracker-apex-stat-trackerUITests/Pods-apex-stat-tracker-apex-stat-trackerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-apex-stat-tracker-apex-stat-trackerUITests/Pods-apex-stat-tracker-apex-stat-trackerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F8CC03CF3A3C127570E06F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-apex-stat-tracker-apex-stat-trackerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B029063B53851CCDCAC9B2D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-apex-stat-trackerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B85AA0FC6A91631B8C28BEC8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-apex-stat-tracker/Pods-apex-stat-tracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-apex-stat-tracker/Pods-apex-stat-tracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-apex-stat-tracker/Pods-apex-stat-tracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA2196E3A28D52BDC9F5F464 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-apex-stat-tracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8F8601C62383436000B2E1BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D0070D69239371070069761A /* StatsRow.swift in Sources */,
+				D045E077239B56A10010DA3F /* SessionController.swift in Sources */,
 				D0070D6D239712F90069761A /* SegmentView.swift in Sources */,
 				D0070D5F238DD1DE0069761A /* Account.swift in Sources */,
 				8F7FE132238379FD003F3720 /* ProfileView.swift in Sources */,
 				8F8601CE2383436000B2E1BF /* AppDelegate.swift in Sources */,
+				D045E07923A02F000010DA3F /* LogInView.swift in Sources */,
 				8F8601D02383436000B2E1BF /* SceneDelegate.swift in Sources */,
+				D045E07B23A030840010DA3F /* SignUpView.swift in Sources */,
 				D0070D6B239372020069761A /* StatsList.swift in Sources */,
 				D0070D61238DD7410069761A /* AccountViewModel.swift in Sources */,
+				D045E075239B55B00010DA3F /* User.swift in Sources */,
 				8F8601FE2383447100B2E1BF /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +632,7 @@
 		};
 		8F8601F52383436200B2E1BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98101D7D43A5C602CB00FD11 /* Pods-apex-stat-tracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -484,6 +653,7 @@
 		};
 		8F8601F62383436200B2E1BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6BDAB683937C78CAA06164E /* Pods-apex-stat-tracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +674,7 @@
 		};
 		8F8601F82383436200B2E1BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 268F7FEE9AF92947B17C2789 /* Pods-apex-stat-trackerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -526,6 +697,7 @@
 		};
 		8F8601F92383436200B2E1BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F64408FA745AA42698E846D /* Pods-apex-stat-trackerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -548,6 +720,7 @@
 		};
 		8F8601FB2383436200B2E1BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40302081C5C3BDC0DCCEA857 /* Pods-apex-stat-tracker-apex-stat-trackerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -568,6 +741,7 @@
 		};
 		8F8601FC2383436200B2E1BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1B0508EB069C56A23A05F8F /* Pods-apex-stat-tracker-apex-stat-trackerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

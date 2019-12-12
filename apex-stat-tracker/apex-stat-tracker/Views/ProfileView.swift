@@ -10,23 +10,36 @@ import SwiftUI
 
 struct ProfileView: View {
     @EnvironmentObject var viewModel: AccountViewModel
+    @EnvironmentObject var sessionController: SessionController
+    
     @State var segmentNumber : Int = 0
+    @State var menuOpen: Bool = false
     
     var body: some View {
         VStack {
+            ZStack {
+
             HStack {
                 Spacer()
                 VStack {
                     
                     HStack {
+                        Button(action: {
+                                self.openMenu()
+                            }, label: {
+                                Text("Open")                            .foregroundColor(.white)
+                                    .font(.system(size: 20))
+                        })
+                        Spacer()
                         Text((self.$viewModel.acc.wrappedValue
                             .data?.platformInfo?.platformUserHandle?.uppercased() ?? "nil") )
-                            .foregroundColor(.white)
+                            .foregroundColor(Color.init(red: 179.0, green: 0.0, blue: 0.0))
                             .font(.system(size: 25))
                         Spacer()
                         Text("XBOX")
                             .foregroundColor(.white)
-                            .font(.system(size: 25))
+                            .font(.system(size: 20))
+
                     }
                     Spacer()
                     
@@ -85,11 +98,79 @@ struct ProfileView: View {
                 Image("apex-background").resizable()
                 .opacity(0.5)
                 )
+
+                    
+                SideMenu(width: 270,
+                        isOpen: self.menuOpen,
+                        menuClose: self.openMenu)
+                }
         } //V stack
         .background(Color.black.edgesIgnoringSafeArea(.all))
-        .onAppear(perform: self.viewModel.load)
+            .onAppear(perform: self.loadData)
     } // body
+    
+    func loadData(){
+        self.sessionController.getUserInfo(email: self.$sessionController.session.wrappedValue?.email ?? "no email") {
+            
+            print("hello")
+            self.viewModel.load(platform: "xbl", handle: self.$sessionController.dbResult.wrappedValue["xbox"] ?? "nada")
+        }
+        
+    }
+    func openMenu() {
+        self.menuOpen.toggle()
+    }
 
+    struct MenuContent: View {
+        @EnvironmentObject var sessionController: SessionController
+        let width: CGFloat
+        
+        var body: some View {
+                VStack {
+                    Button(action: self.signOut){
+                        Spacer()
+                        Text("Logout").foregroundColor(.white).font(.system(size: 20))
+                        Spacer()
+                    }.background(Color.init(red: 179.0, green: 0.0, blue: 0.0))
+                    .cornerRadius(10)
+                    .padding(5)
+                    Spacer()
+                }
+        } //body
+        func signOut() {
+            sessionController.signOut()
+        }
+    }
+
+    struct SideMenu: View {
+        let width: CGFloat
+        let isOpen: Bool
+        let menuClose: () -> Void
+        
+        var body: some View {
+            ZStack {
+                GeometryReader { _ in
+                    EmptyView()
+                }
+                .background(Color.gray.opacity(0.3))
+                .opacity(self.isOpen ? 1.0 : 0.0)
+                .animation(Animation.easeIn.delay(0.25))
+                .onTapGesture {
+                    self.menuClose()
+                }
+                
+                HStack {
+                    MenuContent(width: self.width)
+                        .frame(width: self.width)
+                        .background(Color.init(red: 0.3, green: 0.3, blue: 0.3))
+                        .offset(x: self.isOpen ? 0 : -self.width)
+                        .animation(.default)
+                    
+                    Spacer()
+                }
+            }
+        }
+    }
 }
 
 struct ProfileView_Previews: PreviewProvider {
@@ -97,4 +178,3 @@ struct ProfileView_Previews: PreviewProvider {
         ProfileView().environmentObject(AccountViewModel())
     }
 }
-
