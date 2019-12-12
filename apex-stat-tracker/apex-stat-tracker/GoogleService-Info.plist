@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1002276148143-bumphadavuju95mobhar1pb72qs0h9g0.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1002276148143-bumphadavuju95mobhar1pb72qs0h9g0</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBpjoEh2QfPW7rCvNfKM3ocpKkKnhqfrTY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1002276148143</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.webHead.apex-stat-tracker</string>
+	<key>PROJECT_ID</key>
+	<string>apex-stats-e3773</string>
+	<key>STORAGE_BUCKET</key>
+	<string>apex-stats-e3773.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1002276148143:ios:2c595dab8d5c096d97555a</string>
+	<key>DATABASE_URL</key>
+	<string>https://apex-stats-e3773.firebaseio.com</string>
+</dict>
+</plist>
